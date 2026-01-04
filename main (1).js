@@ -126,7 +126,7 @@ function showService() {
         font-family:Arial;
         cursor: pointer;
       ">
-        <h3 style="color:blue">📘 Chapters</h3>
+        <h3 style="color:blue">  Chapters</h3>
         <p style="font-size:14px;color:gray">Click to view chapters</p>
       </div>
 
@@ -141,7 +141,7 @@ function showService() {
         font-family:Arial;
         cursor: pointer;
       ">
-        <h3 style="color:green">📝 Assignments</h3>
+        <h3 style="color:green">  Assignments</h3>
       </div>
 
     </div>
@@ -429,15 +429,15 @@ function showAssignments() {
 
     ${codeBox("Assignment 1 – Objects Basics", `
 let student1 = new Object();
-student1.name = "mohamed";
-student1.age = 17;
+student1.name = "abdiweli";
+student1.age = 18;
 student1.major = "IT";
 
 console.log("Student 1 Created:\\nName: " + student1.name + "\\nAge: " + student1.age + "\\nMajor: " + student1.major);
 
 let student2 = {
-  name: "Amina",
-  age: 22,
+  name: "hodan",
+  age: 23,
   major: "Computer Science"
 };
 
@@ -463,25 +463,25 @@ console.log("Accessing Student 2:\\nName property: " + student2.name + "\\nAge p
     ${codeBox("Assignment 2 – Object Methods & JSON", `
 let car = {
   brand: "Toyota",
-  model: "Corolla",
-  year: 2018,
-  color: "White"
+  model: "surf",
+  year: 2008,
+  color: "black"
 };
 
 console.log("Initial Car: " + car.brand + " " + car.model + " (" + car.year + ")");
 
-car.brand = "BMW";
-car["year"] = 2022;
+car.brand = "toyota";
+car["year"] = 2018;
 console.log("Modified Car: " + car.brand + " " + car.model + " (" + car.year + ")");
 
-car.speed = "180km/h";
-car["fuelType"] = "Petrol";
+car.speed = "130km/h";
+car["fuelType"] = "fullPetrol";
 console.log("Added Specs: Speed=" + car.speed + ", Fuel=" + car.fuelType);
 
 let Car = {
-  brand: "Toyota",
+  brand: "surf",
   information: function () {
-    console.log("Method Output: hello, where is my car " + this.brand);
+    console.log("Method Output: hello, where is my new car car " + this.brand);
   }
 };
 Car.information();
@@ -499,12 +499,12 @@ console.log("Parsed back to Object (Brand): " + obj.brand);
 `, "a2")}
 
      ${codeBox("Assignment 3 – Object.keys()", `
-let user = { name: "Ali", age: 20, city: "Mogadishu" };
+let user = { name: "abdiweli", age: 24, city: "Mogadishu city" };
 console.log("Keys available in User object: " + Object.keys(user).join(", "));
 `, "a3")}
 
     ${codeBox("Assignment 4 – Object.values()", `
-let user = { name: "Ali", age: 20, city: "Mogadishu" };
+let user = { name: "aweys", age: 20, city: "Mogadishu" };
 console.log("Values in User object: " + Object.values(user).join(", "));
 `, "a4")}
 
@@ -517,14 +517,14 @@ Object.entries(user).forEach(([k, v]) => {
 `, "a5")}
 
     ${codeBox("Assignment 6 – Delete Property", `
-let car = { brand: "BMW", year: 2022 };
+let car = { brand: "BMW", year: 2010 };
 console.log("Before Delete: Year is " + car.year);
 delete car.year;
 console.log("After Delete: Year is " + car.year);
 `, "a6")}
 
     ${codeBox("Assignment 7 – Check Property", `
-let phone = { brand: "Samsung", price: 300 };
+let phone = { brand: "iphone", price: 650 };
 let hasBrand = "brand" in phone;
 console.log("Does phone have 'brand' property? " + hasBrand);
 `, "a7")}
@@ -533,8 +533,8 @@ console.log("Does phone have 'brand' property? " + hasBrand);
 let school = {
   name: "JUST",
   student: {
-    name: "Ali",
-    age: 21
+    name: "abdiweli",
+    age: 18
   }
 };
 console.log("School Name: " + school.name);
@@ -543,7 +543,7 @@ console.log("Nested Student Name: " + school.student.name);
 
     ${codeBox("Assignment 9 – Object Method this", `
 let person = {
-  name: "Amina",
+  name: "hodan",
   greet() {
     console.log("Greeting Method: Hello " + this.name);
   }
@@ -552,7 +552,7 @@ person.greet();
 `, "a9")}
 
     ${codeBox("Assignment 10 – for...in Loop", `
-let book = { title: "JS Guide", pages: 200 };
+let book = { title: "JS Guide", pages: 150};
 console.log("Book Details Loop:");
 for (let key in book) {
   console.log(key + ": " + book[key]);
@@ -564,14 +564,14 @@ function Car(brand, year) {
   this.brand = brand;
   this.year = year;
 }
-let c1 = new Car("Toyota", 2020);
+let c1 = new Car("surf", 2012);
 console.log("New Car Constructed: " + c1.brand + " (" + c1.year + ")");
 `, "a11")}
 
     ${codeBox("Assignment 12 – Array of Objects", `
 let users = [
-  { name: "Ali", age: 20 },
-  { name: "Amina", age: 22 }
+  { name: "abdiweli", age: 18},
+  { name: "hodan", age: 24 }
 ];
 console.log("User List from Array:");
 users.forEach(u => console.log("- " + u.name));
@@ -579,8 +579,8 @@ users.forEach(u => console.log("- " + u.name));
 
     ${codeBox("Assignment 13 – Filter Objects", `
 let users = [
-  { name: "Ali", age: 20 },
-  { name: "Amina", age: 25 },
+  { name: "abdiweli", age: 20 },
+  { name: "hodan", age: 25 },
   { name: "Hassan", age: 22 }
 ];
 let adults = users.filter(u => u.age >= 21);
@@ -591,7 +591,7 @@ adults.forEach(u => console.log(u.name + " is " + u.age));
     ${codeBox("Assignment 14 – Map Objects", `
 let users = [
   { name: "Ali", age: 20 },
-  { name: "Hoda", age: 19 }
+  { name: "Hodan", age: 19 }
 ];
 let names = users.map(u => u.name);
 console.log("Mapped Names Array: " + names.join(", "));
@@ -605,7 +605,7 @@ console.log("Merged Object (Spread): x=" + c.x + ", y=" + c.y);
 `, "a15")}
 
     ${codeBox("Assignment 16 – JSON.parse()", `
-let data = '{"name":"Ali","age":20}';
+let data = '{"name":"Abdiweli","age":20}';
 let obj = JSON.parse(data);
 console.log("Parsed JSON: " + obj.name + " is " + obj.age);
 `, "a16")}
@@ -616,23 +616,23 @@ console.log("Stringified JSON: " + JSON.stringify(obj));
 `, "a17")}
 
     ${codeBox("Assignment 18 – Object.freeze()", `
-let obj = { name: "Ali" };
+let obj = { name: "abdiweli" };
 Object.freeze(obj);
-obj.name = "Ahmed"; // This won't work
+obj.name = "Ahmed";  
 console.log("Freezed Object Name (should allow no change): " + obj.name);
 `, "a18")}
 
     ${codeBox("Assignment 19 – Object.seal()", `
 let obj = { age: 20 };
 Object.seal(obj);
-obj.age = 25; // Allowed
-obj.newProp = "Test"; // Not allowed
+obj.age = 25;   
+obj.newProp = "Test";  
 console.log("Sealed Object Age (changed): " + obj.age);
 console.log("Sealed Object newProp (should be undefined): " + obj.newProp);
 `, "a19")}
 
     ${codeBox("Assignment 20 – hasOwnProperty()", `
-let obj = { name: "Ali" };
+let obj = { name: "Abdiweli" };
 console.log("Does object have 'name'? " + obj.hasOwnProperty("name"));
 `, "a20")}
 
@@ -644,9 +644,9 @@ function Student(name, age, grade) {
 }
 
 let students = [];
-students.push(new Student("Ali", 18, "A"));
-students.push(new Student("Amina", 19, "B"));
-students.push(new Student("Mohamed", 20, "A"));
+students.push(new Student("abdiweli", 18, "A"));
+students.push(new Student("hodan", 19, "B"));
+students.push(new Student("abdikarin", 20, "A"));
 
 console.log("All Students:");
 students.forEach(s => {
@@ -821,6 +821,33 @@ menuBtn.onclick = () => {
   sideNav.style.left =
     sideNav.style.left === "0px" ? "-220px" : "0px";
 };
+
+// ================= FOOTER =================
+const footer = document.createElement("footer");
+
+// style
+footer.style.width = "100%";
+footer.style.background = "blue";
+footer.style.color = "white";
+footer.style.textAlign = "center";
+footer.style.padding = "15px 10px";
+footer.style.fontSize = "14px";
+footer.style.fontWeight = "bold";
+footer.style.position = "fixed";
+footer.style.bottom = "0";
+footer.style.left = "0";
+footer.style.zIndex = "999";
+
+// content
+footer.innerHTML = `
+  <div>home of education</div>
+`;
+
+// si uusan footer u daboolin content-ka
+document.body.style.paddingBottom = "70px";
+
+document.body.appendChild(footer);
+// =========================================
 
 // ===== DEFAULT PAGE =====
 showHome();
